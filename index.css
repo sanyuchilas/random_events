@@ -68,14 +68,37 @@ button {
     height: min(60vh, 60vw);
     width: min(60vh, 60vw);
     border-radius: 50%;
-    border: 1rem solid #be2376;
+    border: 1rem solid;
+    border-color: #be2376;
     transition: all 1s cubic-bezier(0.155, 0.82, 0.175, 1);
+}
+
+#click_me:focus {
+    color: white !important;
+}
+
+@keyframes pulsation {
+    0% {
+        border-color: #be2376;
+        background: #cd2880;
+    }
+
+    100% {
+        border-color: white;
+        background: black;
+    }
+}
+
+#click_me:active {
+    animation: pulsation 1s ease-in-out infinite;
 }
 
 @media (hover: hover) {
     #click_me:hover {
+        color: #cd2880;
         background: #cd2880;
-        border: .5rem solid #e33d96;
+        border: .5rem solid;
+        border-color: #e33d96;
         transform: rotate(360deg);
     }
 }

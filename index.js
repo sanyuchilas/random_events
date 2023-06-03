@@ -1,3 +1,7 @@
+const isMobile = 'ontouchstart' in window
+
+console.log(isMobile)
+
 const clickBtnElement = document.querySelector('#click_me')
 const containerElement = document.querySelector('.container')
 
@@ -10,4 +14,8 @@ const clickClickBtnElementHandler = event => {
     setTimeout(() => containerElement.classList.remove('animate_bg'), 2000)
 }
 
-clickBtnElement.addEventListener('click', clickClickBtnElementHandler)
+if (!isMobile) {
+    clickBtnElement.addEventListener('dblclick', clickClickBtnElementHandler)
+} else {
+    clickBtnElement.addEventListener('click', clickClickBtnElementHandler)
+}
