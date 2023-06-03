@@ -8,10 +8,6 @@
 </head>
 <body>
     <style>
-        :root {
-            --duration: 2s;
-        }
-
         * {
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -78,9 +74,9 @@
             vertical-align: center;
             color: white;
             background: #e33d96;
-            font-size: 6rem;
-            height: 60vh;
-            width: 60vh;
+            font-size: min(13vw, 6rem);
+            height: min(60vh, 60vw);
+            width: min(60vh, 60vw);
             border-radius: 50%;
             border: 1rem solid #be2376;
             transition: all 1s cubic-bezier(0.155, 0.82, 0.175, 1);
